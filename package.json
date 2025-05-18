@@ -1,0 +1,25 @@
+{
+  "name": "event-chariot",
+  "description": "Library with event emitter",
+  "homepage": "https://github.com/CodeOfMisanthrope/Event-Chariot/#readme",
+  "license": "MIT",
+  "version": "0.0.1",
+  "author": {
+    "name": "CodeOfMisanthrope",
+    "email": "iosdsbb@gmail.com",
+    "url": "https://github.com/CodeOfMisanthrope"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeOfMisanthrope/Event-Chariot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeOfMisanthrope/Event-Chariot/issues"
+  },
+  "keywords": [
+    "Event",
+    "Event Emiiter"
+  ],
+  "type": "module",
+  "packageManager": "yarn@4.9.1"
+}
