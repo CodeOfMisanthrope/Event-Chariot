@@ -21,5 +21,16 @@
     "Event Emiiter"
   ],
   "type": "module",
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.1",
+  "scripts": {
+    "start": "node --experimental-transform-types ./src/index.ts",
+    "tsx:w": "tsx --watch src/index.ts",
+    "tsc:w": "tsc -w",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
 }
