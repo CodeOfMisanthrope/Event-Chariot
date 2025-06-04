@@ -16,7 +16,15 @@
     "strictNullChecks": false,
     "strictFunctionTypes": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "~handler/*": [
+        "src/handler/*"
+      ],
+      "~store/*": [
+        "src/store/*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts"
