@@ -16,13 +16,20 @@
     "strictNullChecks": false,
     "strictFunctionTypes": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
+    "baseUrl": "./",
     "paths": {
       "~handler/*": [
         "src/handler/*"
       ],
+      "~handler": [
+        "src/handler"
+      ],
       "~store/*": [
         "src/store/*"
+      ],
+      "~store": [
+        "src/store"
       ]
     }
   },
