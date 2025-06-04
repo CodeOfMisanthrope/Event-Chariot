@@ -9,7 +9,7 @@ class EventEmitter<T> {
   protected _bubbles: StoreHandler<T>;
 
   constructor(
-    protected parent: EventEmitter<T>
+    protected parent?: EventEmitter<T>
   ) {
     this._captures = new HandeStoreDefault();
     this._bubbles = new HandeStoreDefault();
