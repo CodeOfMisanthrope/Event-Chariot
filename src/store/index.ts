@@ -1,5 +1,5 @@
-import {StoreHandler} from "./interfaces";
-import {Handler} from "../handler";
+import {Handler} from "~handler";
+import {StoreHandler} from "~store/interfaces";
 
 export class HandeStoreDefault<T> implements StoreHandler<T>{
   protected storage: Map<string, Set<Handler<T>>>;

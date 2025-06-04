@@ -1,1 +1,1 @@
-export {Handler} from "./interfaces";
+export type {Handler} from "~handler/interfaces";
