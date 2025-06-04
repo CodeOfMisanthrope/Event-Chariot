@@ -1,7 +1,9 @@
-export interface StoreHandler<T> {
-  get(key: string): Nullable<T>;
+import {Handler} from "~handler";
 
-  set(key: string, val: T): void;
+export interface StoreHandler<T> {
+  get(key: string): Nullable<Iterable<Handler<T>>>;
+
+  set(key: string, val: Handler<T>): void;
 
   clear(): void;
 
