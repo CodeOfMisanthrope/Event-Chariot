@@ -21,6 +21,10 @@ export class HandeStoreDefault<T> implements StoreHandler<T>{
     }
   }
 
+  clear() {
+    this.storage.clear();
+  }
+
   isEmpty() {
     return this.storage.size === 0;
   }
