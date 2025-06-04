@@ -9,8 +9,7 @@ export class HandeStoreDefault<T> implements StoreHandler<T>{
   }
 
   get(key: string) {
-    if (this.storage.has(key))
-    return ;
+    return this.storage.has(key) ? this.storage.get(key) : undefined;
   }
 
   isEmpty() {
