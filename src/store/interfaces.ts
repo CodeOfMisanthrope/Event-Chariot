@@ -5,6 +5,8 @@ export interface StoreHandler<T> {
 
   set(key: string, handler: Handler<T>): void;
 
+  remove(key: string, handler?: Handler<T>): void;
+
   clear(): void;
 
   isEmpty(): boolean;

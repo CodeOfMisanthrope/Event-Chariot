@@ -1,7 +1,7 @@
 import {Handler} from "~handler";
 import {StoreHandler} from "~store/interfaces";
 
-export class HandeStoreDefault<T> implements StoreHandler<T>{
+export class HandeStoreDefault<T> implements StoreHandler<T> {
   protected storage: Map<string, Set<Handler<T>>>;
 
   constructor() {
@@ -19,6 +19,21 @@ export class HandeStoreDefault<T> implements StoreHandler<T>{
     } else {
       this.storage.set(key, new Set([handler]));
     }
+  }
+
+  remove(key: string, handler?: Handler<T>) {
+    const storage = this.storage.get(key);
+
+    if (!storage) {
+      return;
+    }
+
+    if (handler && storage.has(handler)) {
+      storage.delete(handler);
+      return;
+    }
+
+    this.storage.delete(key);
   }
 
   clear() {
