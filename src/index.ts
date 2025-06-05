@@ -13,6 +13,12 @@ class EventEmitter<T> {
   ) {
     this._captures = new HandeStoreDefault();
     this._bubbles = new HandeStoreDefault();
+
+    this.on = this.on.bind(this);
+
+    this.on.prototype.capture = (event: string, handler: Handler<T>) => {
+      this._on(event, handler, this._captures);
+    };
   }
 
   protected _on(event:string, handler:Handler<T>, store:StoreHandler<T> = this._bubbles) {
